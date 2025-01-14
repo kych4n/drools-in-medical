@@ -3,7 +3,7 @@
          xmlns="http://www.drools.org/xsd/kmodule">
 
     <kbase name="MedicalKB" packages="org.drools.medical.rule">
-        <ksession name="MedicalKS"/>
+        <ksession name="MedicalKS" type="stateless"/>
     </kbase>
 
 </kmodule>

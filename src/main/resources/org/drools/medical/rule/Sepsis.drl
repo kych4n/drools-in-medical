@@ -1,0 +1,12 @@
+package org.drools.medical.rule;
+
+import org.drools.medical.Patient;
+
+dialect  "mvel"
+
+rule "Sepsis"
+    when
+        p : Patient( sbp < 100, respirationRate > 22, complaints.contains("Altered mental status"))
+    then
+        System.out.println(p.getIndex() + "번째 진료 받은 환자는 패혈증일 가능성이 높습니다.");
+end
